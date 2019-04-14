@@ -8,8 +8,6 @@
 #include "PhysicalNumber.h"
 #include "Unit.h"
 using namespace std;
-//using ariel::Unit;
-//using ariel::PhysicalNumber;
 
 namespace ariel{
 
@@ -303,12 +301,14 @@ bool PhysicalNumber::operator!= (const PhysicalNumber& other){									//12 v
 }
 
 PhysicalNumber PhysicalNumber::operator++(int){													//13 v
+	PhysicalNumber copy = this;
 	this->number++;
-	return *this;
+	return *copy;
 }
 PhysicalNumber PhysicalNumber::operator--(int){													//14 v
+	PhysicalNumber copy = this;
 	this->number--;
-	return *this;
+	return *copy;
 }
 
 PhysicalNumber PhysicalNumber::operator++(){													//15 v
@@ -319,9 +319,6 @@ PhysicalNumber PhysicalNumber::operator--(){													//16 v
 	this->number--;
 	return *this;
 }
-
-
-//namespace ariel{
 
 ostream& operator<< (ostream& os, const PhysicalNumber& p) {									//17 v
 	PhysicalNumber temp = p;
