@@ -242,7 +242,7 @@ PhysicalNumber& PhysicalNumber::operator-= (const PhysicalNumber other){						//
 }
 
 	//Comparative actions
-bool PhysicalNumber::operator> (const PhysicalNumber& other){ 									//7 v
+bool PhysicalNumber::operator> (const PhysicalNumber other){ 									//7 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
 		if (this->number > newB.number){
@@ -254,7 +254,7 @@ bool PhysicalNumber::operator> (const PhysicalNumber& other){ 									//7 v
 		throw std::invalid_argument("The measurement units are different");
 	}
 }
-bool PhysicalNumber::operator>= (const PhysicalNumber& other){									//8 v
+bool PhysicalNumber::operator>= (const PhysicalNumber other){									//8 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
 		if (this->number >= newB.number){
@@ -267,7 +267,7 @@ bool PhysicalNumber::operator>= (const PhysicalNumber& other){									//8 v
 	}
 
 }
-bool PhysicalNumber::operator< (const PhysicalNumber& other){									//9 v
+bool PhysicalNumber::operator< (const PhysicalNumber other){									//9 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
 		if (this->number < newB.number){
@@ -280,7 +280,7 @@ bool PhysicalNumber::operator< (const PhysicalNumber& other){									//9 v
 	}
 
 }
-bool PhysicalNumber::operator<= (const PhysicalNumber& other){									//10 v
+bool PhysicalNumber::operator<= (const PhysicalNumber other){									//10 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
 		if (this->number <= newB.number){
@@ -294,7 +294,7 @@ bool PhysicalNumber::operator<= (const PhysicalNumber& other){									//10 v
 
 
 }
-bool PhysicalNumber::operator== (const PhysicalNumber& other){									//11 v
+bool PhysicalNumber::operator== (const PhysicalNumber other){									//11 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
 		if (this->number == newB.number){
@@ -307,7 +307,7 @@ bool PhysicalNumber::operator== (const PhysicalNumber& other){									//11 v
 	}
 
 }
-bool PhysicalNumber::operator!= (const PhysicalNumber& other){									//12 v
+bool PhysicalNumber::operator!= (const PhysicalNumber other){									//12 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
 		if (this->number != newB.number){
@@ -354,11 +354,3 @@ istream& operator>> (istream& is, PhysicalNumber& p) {											//18 v
 	return is;
 }
 }
-
-
-
-
-
-
-
-
