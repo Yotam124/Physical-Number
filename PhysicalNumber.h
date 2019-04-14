@@ -21,13 +21,13 @@ public :
 
 	PhysicalNumber(double a, Unit unit);
 	//Arithmetics
-	PhysicalNumber operator+ (PhysicalNumber& other); 								//1
+	PhysicalNumber operator+ (PhysicalNumber other); 								//1 &
 	PhysicalNumber& operator+ ();                   								//2
-	PhysicalNumber& operator+= (const PhysicalNumber& other);						//3
+	PhysicalNumber& operator+= (const PhysicalNumber other);						//3 &
 
-	PhysicalNumber operator- (PhysicalNumber& other);								//4
+	PhysicalNumber operator- (PhysicalNumber other);								//4 &
 	PhysicalNumber& operator- ();													//5
-	PhysicalNumber& operator-= (const PhysicalNumber& other);						//6
+	PhysicalNumber& operator-= (const PhysicalNumber other);						//6 &
 
 	//Comparative actions
 	bool operator> (const PhysicalNumber& other);									//7
