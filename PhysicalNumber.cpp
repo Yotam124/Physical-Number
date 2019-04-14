@@ -347,7 +347,7 @@ ostream& operator<< (ostream& os, const PhysicalNumber& p) {									//17 v
 
 istream& operator>> (istream& is, PhysicalNumber& p) {											//18 v
 	string s;
-	int num;
+	double num;
 	is >> num >> s;
 	p.setNumber(num);
 	p.setUnit(toUnit(s));
