@@ -7,6 +7,7 @@
 #include <iostream>
 #include "Unit.h"
 
+#pragma once
 
 namespace ariel{
 
