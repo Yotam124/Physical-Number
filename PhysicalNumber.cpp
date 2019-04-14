@@ -191,7 +191,7 @@ void PhysicalNumber::setNumber(double number){
 }
 
 
-PhysicalNumber PhysicalNumber::operator+ (PhysicalNumber& other){							    //1 v
+PhysicalNumber PhysicalNumber::operator+ (PhysicalNumber other){							    //1 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this, other);
 		PhysicalNumber ans(this->number + newB.number, this->unit);
@@ -205,7 +205,7 @@ PhysicalNumber& PhysicalNumber::operator+ () { //Unary 															//2 v **
 	return *this;
 }
 
-PhysicalNumber& PhysicalNumber::operator+= (const PhysicalNumber& other){						//3 v
+PhysicalNumber& PhysicalNumber::operator+= (const PhysicalNumber other){						//3 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this, other);
 		this->number += newB.number;
@@ -215,7 +215,7 @@ PhysicalNumber& PhysicalNumber::operator+= (const PhysicalNumber& other){						/
 	}
 }
 
-PhysicalNumber PhysicalNumber::operator- (PhysicalNumber& other){								//4 v
+PhysicalNumber PhysicalNumber::operator- (PhysicalNumber other){								//4 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this, other);
 		PhysicalNumber ans(this->number - newB.number, this->unit);
@@ -231,7 +231,7 @@ PhysicalNumber&  PhysicalNumber::operator- (){ //Unary											//5 x
 	return *this;
 }
 
-PhysicalNumber& PhysicalNumber::operator-= (const PhysicalNumber& other){						//6 v
+PhysicalNumber& PhysicalNumber::operator-= (const PhysicalNumber other){						//6 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this, other);
 		this->number -= newB.number;
@@ -354,5 +354,11 @@ istream& operator>> (istream& is, PhysicalNumber& p) {											//18 v
 	return is;
 }
 }
+
+
+
+
+
+
 
 
