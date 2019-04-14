@@ -308,15 +308,24 @@ PhysicalNumber PhysicalNumber::operator--(int){													//14 v
 	return *this;
 }
 
+PhysicalNumber PhysicalNumber::operator++(){													//15 v
+	this->number++;
+	return *this;
+}
+PhysicalNumber PhysicalNumber::operator--(){													//16 v
+	this->number--;
+	return *this;
+}
+
 
 namespace ariel{
 
-ostream& operator<< (ostream& os, const PhysicalNumber& p) {									//15 v
+ostream& operator<< (ostream& os, const PhysicalNumber& p) {									//17 v
 	PhysicalNumber temp = p;
 	return os << temp.getNumber() << toString(temp);
 }
 
-istream& operator>> (istream& is, PhysicalNumber& p) {											//16 v
+istream& operator>> (istream& is, PhysicalNumber& p) {											//18 v
 	string s;
 	int num;
 	is >> num >> s;
