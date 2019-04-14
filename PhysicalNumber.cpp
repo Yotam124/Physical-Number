@@ -6,9 +6,12 @@
  */
 #include <iostream>
 #include "PhysicalNumber.h"
+#include "Unit.h"
 using namespace std;
-using ariel::Unit;
-using ariel::PhysicalNumber;
+//using ariel::Unit;
+//using ariel::PhysicalNumber;
+
+namespace ariel{
 
 //side functions************************************************************************
 
@@ -318,7 +321,7 @@ PhysicalNumber PhysicalNumber::operator--(){													//16 v
 }
 
 
-namespace ariel{
+//namespace ariel{
 
 ostream& operator<< (ostream& os, const PhysicalNumber& p) {									//17 v
 	PhysicalNumber temp = p;
