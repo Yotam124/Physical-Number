@@ -39,9 +39,12 @@ public :
 
 	PhysicalNumber operator++(int);													//13
 	PhysicalNumber operator--(int);													//14
+	PhysicalNumber operator++();													//15
+	PhysicalNumber operator--();													//16
 
-	friend std::ostream& operator<< (std::ostream& os, const PhysicalNumber& p);	//15
-	friend std::istream& operator>> (std::istream& is, PhysicalNumber& p);			//16
+
+	friend std::ostream& operator<< (std::ostream& os, const PhysicalNumber& p);	//17
+	friend std::istream& operator>> (std::istream& is, PhysicalNumber& p);			//18
 
 	Unit getUnit();
 	void setUnit(Unit unit);
