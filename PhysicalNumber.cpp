@@ -245,7 +245,11 @@ PhysicalNumber& PhysicalNumber::operator-= (const PhysicalNumber& other){						/
 bool PhysicalNumber::operator> (const PhysicalNumber& other){ 									//7 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
-		return (this->number > newB.number);
+		if (this->number > newB.number){
+			return true;
+		}else{
+			return false;
+		}
 	}else{
 		throw std::invalid_argument("The measurement units are different");
 	}
@@ -253,7 +257,11 @@ bool PhysicalNumber::operator> (const PhysicalNumber& other){ 									//7 v
 bool PhysicalNumber::operator>= (const PhysicalNumber& other){									//8 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
-		return (this->number >= newB.number);
+		if (this->number >= newB.number){
+			return true;
+		}else{
+			return false;
+		}
 	}else{
 		throw std::invalid_argument("The measurement units are different");
 	}
@@ -262,7 +270,11 @@ bool PhysicalNumber::operator>= (const PhysicalNumber& other){									//8 v
 bool PhysicalNumber::operator< (const PhysicalNumber& other){									//9 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
-		return (this->number < newB.number);
+		if (this->number < newB.number){
+			return true;
+		}else {
+			return false;
+		}
 	}else{
 		throw std::invalid_argument("The measurement units are different");
 	}
@@ -271,7 +283,11 @@ bool PhysicalNumber::operator< (const PhysicalNumber& other){									//9 v
 bool PhysicalNumber::operator<= (const PhysicalNumber& other){									//10 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
-		return (this->number <= newB.number);
+		if (this->number <= newB.number){
+			return true;
+		}else{
+			return false;
+		}
 	}else{
 		throw std::invalid_argument("The measurement units are different");
 	}
@@ -294,7 +310,11 @@ bool PhysicalNumber::operator== (const PhysicalNumber& other){									//11 v
 bool PhysicalNumber::operator!= (const PhysicalNumber& other){									//12 v
 	if (checkUnit(*this, other) == true){
 		PhysicalNumber newB = convert(*this,other);
-		return (this->number != newB.number);
+		if (this->number != newB.number){
+			return true;
+		}else {
+			return false;
+		}
 	}else{
 		throw std::invalid_argument("The measurement units are different");
 	}
@@ -334,11 +354,5 @@ istream& operator>> (istream& is, PhysicalNumber& p) {											//18 v
 	return is;
 }
 }
-
-
-
-
-
-
 
 
