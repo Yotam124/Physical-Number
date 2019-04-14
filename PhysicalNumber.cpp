@@ -301,14 +301,14 @@ bool PhysicalNumber::operator!= (const PhysicalNumber& other){									//12 v
 }
 
 PhysicalNumber PhysicalNumber::operator++(int){													//13 v
-	PhysicalNumber copy = this;
+	PhysicalNumber copy(this->getNumber(), this->getUnit());
 	this->number++;
-	return *copy;
+	return copy;
 }
 PhysicalNumber PhysicalNumber::operator--(int){													//14 v
-	PhysicalNumber copy = this;
+	PhysicalNumber copy(this->getNumber(), this->getUnit());
 	this->number--;
-	return *copy;
+	return copy;
 }
 
 PhysicalNumber PhysicalNumber::operator++(){													//15 v
