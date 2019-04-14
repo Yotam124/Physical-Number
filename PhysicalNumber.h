@@ -7,7 +7,6 @@
 #include <iostream>
 #include "Unit.h"
 
-using ariel::Unit;
 
 namespace ariel{
 
