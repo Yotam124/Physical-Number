@@ -101,10 +101,14 @@ int main() {
 		  .CHECK_OUTPUT(p3, "5[hour]") //p3 still remain the same.
 		  .CHECK_OUTPUT((p4 -= PhysicalNumber(30, Unit::SEC)), "59.5[min]")
 		  .CHECK_OUTPUT(p4, "59.5[min]") //p4 has changed.
-		  .CHECK_OUTPUT(p1++, "11[ton]")
-		  .CHECK_OUTPUT(p2--, "999[kg]")
+		  .CHECK_OUTPUT(p1++, "10[ton]")
+		  .CHECK_OUTPUT(p2--, "1000[kg]")
+		  .CHECK_OUTPUT(p1, "11[ton]")
+		  .CHECK_OUTPUT(p2, "999[kg]")
 		  .CHECK_OUTPUT(-p2, "-999[kg]")
 		  .CHECK_OUTPUT(+p2, "-999[kg]")
+		  .CHECK_OUTPUT(++p7, "4[g]")
+		  .CHECK_OUTPUT(--p8, "2[m]")
 
 
 	  .setname("Basic input")
